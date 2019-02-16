@@ -1,0 +1,19 @@
+- name : DEMO on remove all files and folders
+  hosts : DEV
+  become : yes
+  tasks :
+    - name : find the all files and folders
+      find : 
+        paths : /demo
+        file_type : any
+      register : out
+
+    - name : print the files
+      debug :
+        msg : "{{out}}"
+
+    - name : remove the files
+      file :
+        path : "{{item.path}}"
+        state : absent
+      loop : "{{out.files}}"

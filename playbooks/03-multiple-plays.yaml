@@ -1,0 +1,28 @@
+- name : PLAY1
+  hosts : DEV
+  tags :
+    - DEV
+  tasks :
+    - name : PLAY1 and TASK1
+      tags :
+        - SAMPLE
+      debug :
+        msg : "Hello from PLAY1 and TASK1"
+
+    - name : PLAY1 and TASK2
+      debug :
+        msg : "Hello from PLAY1 and TASK2"
+
+
+- name : PLAY2
+  hosts : DEV
+  tags :
+    - QA
+  tasks :
+    - name : PLAY2 and TASK1
+      debug :
+        msg : "Hello from PLAY2 and TASK1"
+
+    - name : PLAY2 and TASK2
+      debug :
+        msg : "Hello from PLAY2 and TASK2"

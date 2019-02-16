@@ -1,0 +1,10 @@
+- name : DEMO on variables from external files
+  hosts : DEV
+  vars_prompt :
+    - name : "PASSWORD"
+      prompt : Please enter the password
+      private : no
+  tasks :
+    - name : print the variables from external files
+      debug :
+        msg : "username = {{USERNAME}} and password = {{PASSWORD}}"

@@ -1,0 +1,5 @@
+- name : ping test
+  hosts : DEV
+  tasks :
+    - name : I am writing a ping test
+      ping :

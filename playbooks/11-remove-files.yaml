@@ -1,0 +1,12 @@
+- name : DEMO on file module to remove the files
+  hosts : DEV
+  become : yes
+  tasks :
+    - name : remove the file
+      file :
+        path : "{{item}}"
+        state : absent
+      loop :
+        - /demo/abc
+        - /demo/def
+        - /demo/ghi

@@ -1,0 +1,6 @@
+- name : debug play test
+  hosts : DEV
+  tasks :
+    - name : testing debug task
+      debug :
+        msg : "Hi Good Morning"

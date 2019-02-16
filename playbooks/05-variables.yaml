@@ -1,0 +1,14 @@
+- name : DEMO on variables
+  hosts : DEV
+  vars :
+    - greet : DevOps
+  tasks :
+    - name : print the variables
+      debug :
+        msg : "Hello Good Morning {{greet}}"
+
+    - name : print the variables at task level
+      vars :
+        - greet : JAVA
+      debug :
+        msg : "Hello Good Morning {{greet}}"

@@ -1,0 +1,5 @@
+[DEV]
+student-dev-app-01
+
+[DEV:vars]
+USERNAME=student
